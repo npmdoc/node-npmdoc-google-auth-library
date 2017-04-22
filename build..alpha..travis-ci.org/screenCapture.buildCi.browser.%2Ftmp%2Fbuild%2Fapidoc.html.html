@@ -1,0 +1,3247 @@
+<html><head></head><body><div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a href="https://github.com/google/google-auth-library-nodejs#readme">google-auth-library (v0.10.0)</a>
+</h1>
+<h4>Google APIs Authentication Client Library for Node.js</h4>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.google-auth-library">module google-auth-library</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.google-auth-library.google-auth-library">
+            function <span class="apidocSignatureSpan"></span>google-auth-library
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.google-auth-library.authclient">
+            function <span class="apidocSignatureSpan">google-auth-library.</span>authclient
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.google-auth-library.computeclient">
+            function <span class="apidocSignatureSpan">google-auth-library.</span>computeclient
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.google-auth-library.iam">
+            function <span class="apidocSignatureSpan">google-auth-library.</span>iam
+            <span class="apidocSignatureSpan">(selector, token)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.google-auth-library.jwtaccess">
+            function <span class="apidocSignatureSpan">google-auth-library.</span>jwtaccess
+            <span class="apidocSignatureSpan">(email, key)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.google-auth-library.jwtclient">
+            function <span class="apidocSignatureSpan">google-auth-library.</span>jwtclient
+            <span class="apidocSignatureSpan">(email, keyFile, key, scopes, subject)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.google-auth-library.loginticket">
+            function <span class="apidocSignatureSpan">google-auth-library.</span>loginticket
+            <span class="apidocSignatureSpan">(env, pay)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.google-auth-library.oauth2client">
+            function <span class="apidocSignatureSpan">google-auth-library.</span>oauth2client
+            <span class="apidocSignatureSpan">(clientId, clientSecret, redirectUri, opt_opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.google-auth-library.refreshclient">
+            function <span class="apidocSignatureSpan">google-auth-library.</span>refreshclient
+            <span class="apidocSignatureSpan">(clientId, clientSecret, refreshToken)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.google-auth-library.transporters">
+            function <span class="apidocSignatureSpan">google-auth-library.</span>transporters
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">google-auth-library.</span>authclient.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">google-auth-library.</span>computeclient.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">google-auth-library.</span>iam.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">google-auth-library.</span>jwtaccess.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">google-auth-library.</span>jwtclient.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">google-auth-library.</span>loginticket.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">google-auth-library.</span>oauth2client.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">google-auth-library.</span>refreshclient.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">google-auth-library.</span>transporters.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">google-auth-library.</span>utils</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.google-auth-library.authclient">module google-auth-library.authclient</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.google-auth-library.authclient.authclient">
+            function <span class="apidocSignatureSpan">google-auth-library.</span>authclient
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.google-auth-library.authclient.prototype">module google-auth-library.authclient.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.google-auth-library.authclient.prototype.request">
+            function <span class="apidocSignatureSpan">google-auth-library.authclient.prototype.</span>request
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.google-auth-library.authclient.prototype.setCredentials">
+            function <span class="apidocSignatureSpan">google-auth-library.authclient.prototype.</span>setCredentials
+            <span class="apidocSignatureSpan">(credentials)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.google-auth-library.computeclient">module google-auth-library.computeclient</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.google-auth-library.computeclient.computeclient">
+            function <span class="apidocSignatureSpan">google-auth-library.</span>computeclient
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.google-auth-library.computeclient.super_">
+            function <span class="apidocSignatureSpan">google-auth-library.computeclient.</span>super_
+            <span class="apidocSignatureSpan">(clientId, clientSecret, redirectUri, opt_opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">google-auth-library.computeclient.</span>GOOGLE_OAUTH2_TOKEN_URL_</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.google-auth-library.computeclient.prototype">module google-auth-library.computeclient.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.google-auth-library.computeclient.prototype._injectErrorMessage">
+            function <span class="apidocSignatureSpan">google-auth-library.computeclient.prototype.</span>_injectErrorMessage
+            <span class="apidocSignatureSpan">(err, result, response, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.google-auth-library.computeclient.prototype.createScopedRequired">
+            function <span class="apidocSignatureSpan">google-auth-library.computeclient.prototype.</span>createScopedRequired
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.google-auth-library.computeclient.prototype.refreshToken_">
+            function <span class="apidocSignatureSpan">google-auth-library.computeclient.prototype.</span>refreshToken_
+            <span class="apidocSignatureSpan">(ignored_, opt_callback)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.google-auth-library.iam">module google-auth-library.iam</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.google-auth-library.iam.iam">
+            function <span class="apidocSignatureSpan">google-auth-library.</span>iam
+            <span class="apidocSignatureSpan">(selector, token)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.google-auth-library.iam.prototype">module google-auth-library.iam.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.google-auth-library.iam.prototype.createScopedRequired">
+            function <span class="apidocSignatureSpan">google-auth-library.iam.prototype.</span>createScopedRequired
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.google-auth-library.iam.prototype.getRequestMetadata">
+            function <span class="apidocSignatureSpan">google-auth-library.iam.prototype.</span>getRequestMetadata
+            <span class="apidocSignatureSpan">(unused_uri_, metadataFn)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.google-auth-library.jwtaccess">module google-auth-library.jwtaccess</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.google-auth-library.jwtaccess.jwtaccess">
+            function <span class="apidocSignatureSpan">google-auth-library.</span>jwtaccess
+            <span class="apidocSignatureSpan">(email, key)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.google-auth-library.jwtaccess.prototype">module google-auth-library.jwtaccess.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.google-auth-library.jwtaccess.prototype._signJWT">
+            function <span class="apidocSignatureSpan">google-auth-library.jwtaccess.prototype.</span>_signJWT
+            <span class="apidocSignatureSpan">(assertion, signedJwtFn)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.google-auth-library.jwtaccess.prototype.createScopedRequired">
+            function <span class="apidocSignatureSpan">google-auth-library.jwtaccess.prototype.</span>createScopedRequired
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.google-auth-library.jwtaccess.prototype.fromJSON">
+            function <span class="apidocSignatureSpan">google-auth-library.jwtaccess.prototype.</span>fromJSON
+            <span class="apidocSignatureSpan">(json, opt_callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.google-auth-library.jwtaccess.prototype.fromStream">
+            function <span class="apidocSignatureSpan">google-auth-library.jwtaccess.prototype.</span>fromStream
+            <span class="apidocSignatureSpan">(stream, opt_callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.google-auth-library.jwtaccess.prototype.getRequestMetadata">
+            function <span class="apidocSignatureSpan">google-auth-library.jwtaccess.prototype.</span>getRequestMetadata
+            <span class="apidocSignatureSpan">(authURI, metadataCb)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.google-auth-library.jwtclient">module google-auth-library.jwtclient</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.google-auth-library.jwtclient.jwtclient">
+            function <span class="apidocSignatureSpan">google-auth-library.</span>jwtclient
+            <span class="apidocSignatureSpan">(email, keyFile, key, scopes, subject)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.google-auth-library.jwtclient.super_">
+            function <span class="apidocSignatureSpan">google-auth-library.jwtclient.</span>super_
+            <span class="apidocSignatureSpan">(clientId, clientSecret, redirectUri, opt_opts)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.google-auth-library.jwtclient.prototype">module google-auth-library.jwtclient.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.google-auth-library.jwtclient.prototype._createGToken">
+            function <span class="apidocSignatureSpan">google-auth-library.jwtclient.prototype.</span>_createGToken
+            <span class="apidocSignatureSpan">(callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.google-auth-library.jwtclient.prototype.authorize">
+            function <span class="apidocSignatureSpan">google-auth-library.jwtclient.prototype.</span>authorize
+            <span class="apidocSignatureSpan">(opt_callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.google-auth-library.jwtclient.prototype.createScoped">
+            function <span class="apidocSignatureSpan">google-auth-library.jwtclient.prototype.</span>createScoped
+            <span class="apidocSignatureSpan">(scopes)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.google-auth-library.jwtclient.prototype.createScopedRequired">
+            function <span class="apidocSignatureSpan">google-auth-library.jwtclient.prototype.</span>createScopedRequired
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.google-auth-library.jwtclient.prototype.fromJSON">
+            function <span class="apidocSignatureSpan">google-auth-library.jwtclient.prototype.</span>fromJSON
+            <span class="apidocSignatureSpan">(json, opt_callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.google-auth-library.jwtclient.prototype.fromStream">
+            function <span class="apidocSignatureSpan">google-auth-library.jwtclient.prototype.</span>fromStream
+            <span class="apidocSignatureSpan">(stream, opt_callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.google-auth-library.jwtclient.prototype.getRequestMetadata">
+            function <span class="apidocSignatureSpan">google-auth-library.jwtclient.prototype.</span>getRequestMetadata
+            <span class="apidocSignatureSpan">(opt_uri, metadataCb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.google-auth-library.jwtclient.prototype.refreshToken_">
+            function <span class="apidocSignatureSpan">google-auth-library.jwtclient.prototype.</span>refreshToken_
+            <span class="apidocSignatureSpan">(ignored_, opt_callback)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.google-auth-library.loginticket">module google-auth-library.loginticket</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.google-auth-library.loginticket.loginticket">
+            function <span class="apidocSignatureSpan">google-auth-library.</span>loginticket
+            <span class="apidocSignatureSpan">(env, pay)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.google-auth-library.loginticket.prototype">module google-auth-library.loginticket.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.google-auth-library.loginticket.prototype.getAttributes">
+            function <span class="apidocSignatureSpan">google-auth-library.loginticket.prototype.</span>getAttributes
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.google-auth-library.loginticket.prototype.getUserId">
+            function <span class="apidocSignatureSpan">google-auth-library.loginticket.prototype.</span>getUserId
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.google-auth-library.oauth2client">module google-auth-library.oauth2client</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.google-auth-library.oauth2client.oauth2client">
+            function <span class="apidocSignatureSpan">google-auth-library.</span>oauth2client
+            <span class="apidocSignatureSpan">(clientId, clientSecret, redirectUri, opt_opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.google-auth-library.oauth2client.super_">
+            function <span class="apidocSignatureSpan">google-auth-library.oauth2client.</span>super_
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">google-auth-library.oauth2client.</span>CLOCK_SKEW_SECS_</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">google-auth-library.oauth2client.</span>MAX_TOKEN_LIFETIME_SECS_</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">google-auth-library.oauth2client.</span>ISSUERS_</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">google-auth-library.oauth2client.</span>GOOGLE_OAUTH2_AUTH_BASE_URL_</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">google-auth-library.oauth2client.</span>GOOGLE_OAUTH2_FEDERATED_SIGNON_CERTS_URL_</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">google-auth-library.oauth2client.</span>GOOGLE_OAUTH2_REVOKE_URL_</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">google-auth-library.oauth2client.</span>GOOGLE_OAUTH2_TOKEN_URL_</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.google-auth-library.oauth2client.prototype">module google-auth-library.oauth2client.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.google-auth-library.oauth2client.prototype._makeRequest">
+            function <span class="apidocSignatureSpan">google-auth-library.oauth2client.prototype.</span>_makeRequest
+            <span class="apidocSignatureSpan">(opts, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.google-auth-library.oauth2client.prototype._postRequest">
+            function <span class="apidocSignatureSpan">google-auth-library.oauth2client.prototype.</span>_postRequest
+            <span class="apidocSignatureSpan">(err, result, response, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.google-auth-library.oauth2client.prototype.decodeBase64">
+            function <span class="apidocSignatureSpan">google-auth-library.oauth2client.prototype.</span>decodeBase64
+            <span class="apidocSignatureSpan">(b64String)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.google-auth-library.oauth2client.prototype.generateAuthUrl">
+            function <span class="apidocSignatureSpan">google-auth-library.oauth2client.prototype.</span>generateAuthUrl
+            <span class="apidocSignatureSpan">(opt_opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.google-auth-library.oauth2client.prototype.getAccessToken">
+            function <span class="apidocSignatureSpan">google-auth-library.oauth2client.prototype.</span>getAccessToken
+            <span class="apidocSignatureSpan">(callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.google-auth-library.oauth2client.prototype.getFederatedSignonCerts">
+            function <span class="apidocSignatureSpan">google-auth-library.oauth2client.prototype.</span>getFederatedSignonCerts
+            <span class="apidocSignatureSpan">(callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.google-auth-library.oauth2client.prototype.getRequestMetadata">
+            function <span class="apidocSignatureSpan">google-auth-library.oauth2client.prototype.</span>getRequestMetadata
+            <span class="apidocSignatureSpan">(opt_uri, metadataCb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.google-auth-library.oauth2client.prototype.getToken">
+            function <span class="apidocSignatureSpan">google-auth-library.oauth2client.prototype.</span>getToken
+            <span class="apidocSignatureSpan">(code, opt_callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.google-auth-library.oauth2client.prototype.refreshAccessToken">
+            function <span class="apidocSignatureSpan">google-auth-library.oauth2client.prototype.</span>refreshAccessToken
+            <span class="apidocSignatureSpan">(callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.google-auth-library.oauth2client.prototype.refreshToken_">
+            function <span class="apidocSignatureSpan">google-auth-library.oauth2client.prototype.</span>refreshToken_
+            <span class="apidocSignatureSpan">(refresh_token, opt_callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.google-auth-library.oauth2client.prototype.request">
+            function <span class="apidocSignatureSpan">google-auth-library.oauth2client.prototype.</span>request
+            <span class="apidocSignatureSpan">(opts, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.google-auth-library.oauth2client.prototype.revokeCredentials">
+            function <span class="apidocSignatureSpan">google-auth-library.oauth2client.prototype.</span>revokeCredentials
+            <span class="apidocSignatureSpan">(callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.google-auth-library.oauth2client.prototype.revokeToken">
+            function <span class="apidocSignatureSpan">google-auth-library.oauth2client.prototype.</span>revokeToken
+            <span class="apidocSignatureSpan">(token, opt_callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.google-auth-library.oauth2client.prototype.verifyIdToken">
+            function <span class="apidocSignatureSpan">google-auth-library.oauth2client.prototype.</span>verifyIdToken
+            <span class="apidocSignatureSpan">(idToken, audience, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.google-auth-library.oauth2client.prototype.verifySignedJwtWithCerts">
+            function <span class="apidocSignatureSpan">google-auth-library.oauth2client.prototype.</span>verifySignedJwtWithCerts
+            <span class="apidocSignatureSpan">(jwt, certs, requiredAudience, issuers, maxExpiry)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.google-auth-library.refreshclient">module google-auth-library.refreshclient</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.google-auth-library.refreshclient.refreshclient">
+            function <span class="apidocSignatureSpan">google-auth-library.</span>refreshclient
+            <span class="apidocSignatureSpan">(clientId, clientSecret, refreshToken)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.google-auth-library.refreshclient.super_">
+            function <span class="apidocSignatureSpan">google-auth-library.refreshclient.</span>super_
+            <span class="apidocSignatureSpan">(clientId, clientSecret, redirectUri, opt_opts)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.google-auth-library.refreshclient.prototype">module google-auth-library.refreshclient.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.google-auth-library.refreshclient.prototype.fromJSON">
+            function <span class="apidocSignatureSpan">google-auth-library.refreshclient.prototype.</span>fromJSON
+            <span class="apidocSignatureSpan">(json, opt_callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.google-auth-library.refreshclient.prototype.fromStream">
+            function <span class="apidocSignatureSpan">google-auth-library.refreshclient.prototype.</span>fromStream
+            <span class="apidocSignatureSpan">(stream, opt_callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.google-auth-library.refreshclient.prototype.refreshToken_">
+            function <span class="apidocSignatureSpan">google-auth-library.refreshclient.prototype.</span>refreshToken_
+            <span class="apidocSignatureSpan">(ignored_, opt_callback)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.google-auth-library.transporters">module google-auth-library.transporters</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.google-auth-library.transporters.transporters">
+            function <span class="apidocSignatureSpan">google-auth-library.</span>transporters
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.google-auth-library.transporters.prototype">module google-auth-library.transporters.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.google-auth-library.transporters.prototype.configure">
+            function <span class="apidocSignatureSpan">google-auth-library.transporters.prototype.</span>configure
+            <span class="apidocSignatureSpan">(opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.google-auth-library.transporters.prototype.request">
+            function <span class="apidocSignatureSpan">google-auth-library.transporters.prototype.</span>request
+            <span class="apidocSignatureSpan">(opts, opt_callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.google-auth-library.transporters.prototype.wrapCallback_">
+            function <span class="apidocSignatureSpan">google-auth-library.transporters.prototype.</span>wrapCallback_
+            <span class="apidocSignatureSpan">(opt_callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">google-auth-library.transporters.prototype.</span>USER_AGENT</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.google-auth-library.utils">module google-auth-library.utils</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.google-auth-library.utils.extend">
+            function <span class="apidocSignatureSpan">google-auth-library.utils.</span>extend
+            <span class="apidocSignatureSpan">(obj)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.google-auth-library" id="apidoc.module.google-auth-library">module google-auth-library</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.google-auth-library.google-auth-library" id="apidoc.element.google-auth-library.google-auth-library">
+        function <span class="apidocSignatureSpan"></span>google-auth-library
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function GoogleAuth() {
+  this.JWTClient = JWTClient;
+  this.ComputeClient = ComputeClient;
+  this._cachedCredential = null;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.google-auth-library.authclient" id="apidoc.element.google-auth-library.authclient">
+        function <span class="apidocSignatureSpan">google-auth-library.</span>authclient
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function AuthClient() {
+  this.transporter = new DefaultTransporter();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.google-auth-library.computeclient" id="apidoc.element.google-auth-library.computeclient">
+        function <span class="apidocSignatureSpan">google-auth-library.</span>computeclient
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Compute() {
+  Compute.super_.call(this);
+  // Start with an expired refresh token, which will automatically be refreshed
+  // before the first API call is made.
+  this.credentials = {
+    refresh_token: 'compute-placeholder',
+    expiry_date: 1
+  };
+
+  // Hook the post request method so we can provide better error messages.
+  this._postRequest = this._injectErrorMessage;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.google-auth-library.iam" id="apidoc.element.google-auth-library.iam">
+        function <span class="apidocSignatureSpan">google-auth-library.</span>iam
+        <span class="apidocSignatureSpan">(selector, token)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function IAMAuth(selector, token) {
+  this.selector = selector;
+  this.token = token;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.google-auth-library.jwtaccess" id="apidoc.element.google-auth-library.jwtaccess">
+        function <span class="apidocSignatureSpan">google-auth-library.</span>jwtaccess
+        <span class="apidocSignatureSpan">(email, key)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function JWTAccess(email, key) {
+  this.email = email;
+  this.key = key;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.google-auth-library.jwtclient" id="apidoc.element.google-auth-library.jwtclient">
+        function <span class="apidocSignatureSpan">google-auth-library.</span>jwtclient
+        <span class="apidocSignatureSpan">(email, keyFile, key, scopes, subject)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function JWT(email, keyFile, key, scopes, subject) {
+  JWT.super_.call(this);
+  this.email = email;
+  this.keyFile = keyFile;
+  this.key = key;
+  this.scopes = scopes;
+  this.subject = subject;
+  this.gToken = gToken;
+
+  this.credentials = {
+    refresh_token: 'jwt-placeholder',
+    expiry_date: 1
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.google-auth-library.loginticket" id="apidoc.element.google-auth-library.loginticket">
+        function <span class="apidocSignatureSpan">google-auth-library.</span>loginticket
+        <span class="apidocSignatureSpan">(env, pay)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function LoginTicket(env, pay) {
+  var envelope = env;
+  var payload = pay;
+
+  this.getEnvelope = function() {
+    return envelope;
+  };
+
+  this.getPayload = function() {
+    return payload;
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.google-auth-library.oauth2client" id="apidoc.element.google-auth-library.oauth2client">
+        function <span class="apidocSignatureSpan">google-auth-library.</span>oauth2client
+        <span class="apidocSignatureSpan">(clientId, clientSecret, redirectUri, opt_opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function OAuth2Client(clientId, clientSecret, redirectUri, opt_opts) {
+  OAuth2Client.super_.call(this);
+
+  this.clientId_ = clientId;
+  this.clientSecret_ = clientSecret;
+  this.redirectUri_ = redirectUri;
+  this.opts = opt_opts || {};
+  this.credentials = {};
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.google-auth-library.refreshclient" id="apidoc.element.google-auth-library.refreshclient">
+        function <span class="apidocSignatureSpan">google-auth-library.</span>refreshclient
+        <span class="apidocSignatureSpan">(clientId, clientSecret, refreshToken)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function UserRefreshClient(clientId, clientSecret, refreshToken) {
+  UserRefreshClient.super_.call(this, clientId, clientSecret);
+  // Named to avoid collision with the method refreshToken_
+  this._refreshToken = refreshToken;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.google-auth-library.transporters" id="apidoc.element.google-auth-library.transporters">
+        function <span class="apidocSignatureSpan">google-auth-library.</span>transporters
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function DefaultTransporter() {}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.google-auth-library.authclient" id="apidoc.module.google-auth-library.authclient">module google-auth-library.authclient</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.google-auth-library.authclient.authclient" id="apidoc.element.google-auth-library.authclient.authclient">
+        function <span class="apidocSignatureSpan">google-auth-library.</span>authclient
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function AuthClient() {
+  this.transporter = new DefaultTransporter();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.google-auth-library.authclient.prototype" id="apidoc.module.google-auth-library.authclient.prototype">module google-auth-library.authclient.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.google-auth-library.authclient.prototype.request" id="apidoc.element.google-auth-library.authclient.prototype.request">
+        function <span class="apidocSignatureSpan">google-auth-library.authclient.prototype.</span>request
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">request = function () {
+  throw new Error('Not implemented yet.');
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ * @param {object=} ignored_
+ * @param {function=} opt_callback Optional callback.
+ * @private
+ */
+Compute.prototype.refreshToken_ = function(ignored_, opt_callback) {
+var uri = this.opts.tokenUrl || Compute.GOOGLE_OAUTH2_TOKEN_URL_;
+// request for new token
+this.transporter.<span class="apidocCodeKeywordSpan">request</span>({
+  method: 'GET',
+  uri: uri,
+  json: true
+}, function(err, tokens, response) {
+  if (!err &amp;&amp; tokens &amp;&amp; tokens.expires_in) {
+    tokens.expiry_date = ((new Date()).getTime() + (tokens.expires_in * 1000));
+    delete tokens.expires_in;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.google-auth-library.authclient.prototype.setCredentials" id="apidoc.element.google-auth-library.authclient.prototype.setCredentials">
+        function <span class="apidocSignatureSpan">google-auth-library.authclient.prototype.</span>setCredentials
+        <span class="apidocSignatureSpan">(credentials)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">setCredentials = function (credentials) {
+  this.credentials = credentials;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.google-auth-library.computeclient" id="apidoc.module.google-auth-library.computeclient">module google-auth-library.computeclient</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.google-auth-library.computeclient.computeclient" id="apidoc.element.google-auth-library.computeclient.computeclient">
+        function <span class="apidocSignatureSpan">google-auth-library.</span>computeclient
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Compute() {
+  Compute.super_.call(this);
+  // Start with an expired refresh token, which will automatically be refreshed
+  // before the first API call is made.
+  this.credentials = {
+    refresh_token: 'compute-placeholder',
+    expiry_date: 1
+  };
+
+  // Hook the post request method so we can provide better error messages.
+  this._postRequest = this._injectErrorMessage;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.google-auth-library.computeclient.super_" id="apidoc.element.google-auth-library.computeclient.super_">
+        function <span class="apidocSignatureSpan">google-auth-library.computeclient.</span>super_
+        <span class="apidocSignatureSpan">(clientId, clientSecret, redirectUri, opt_opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function OAuth2Client(clientId, clientSecret, redirectUri, opt_opts) {
+  OAuth2Client.super_.call(this);
+
+  this.clientId_ = clientId;
+  this.clientSecret_ = clientSecret;
+  this.redirectUri_ = redirectUri;
+  this.opts = opt_opts || {};
+  this.credentials = {};
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.google-auth-library.computeclient.prototype" id="apidoc.module.google-auth-library.computeclient.prototype">module google-auth-library.computeclient.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.google-auth-library.computeclient.prototype._injectErrorMessage" id="apidoc.element.google-auth-library.computeclient.prototype._injectErrorMessage">
+        function <span class="apidocSignatureSpan">google-auth-library.computeclient.prototype.</span>_injectErrorMessage
+        <span class="apidocSignatureSpan">(err, result, response, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_injectErrorMessage = function (err, result, response, callback) {
+  if (response &amp;&amp; response.statusCode) {
+    var helpfulMessage = null;
+    if (response.statusCode === 403) {
+      helpfulMessage = 'A Forbidden error was returned while attempting to retrieve an access ' +
+        'token for the Compute Engine built-in service account. This may be because the Compute ' +
+        'Engine instance does not have the correct permission scopes specified.';
+    } else if (response.statusCode === 404) {
+      helpfulMessage = 'A Not Found error was returned while attempting to retrieve an access' +
+        'token for the Compute Engine built-in service account. This may be because the Compute ' +
+        'Engine instance does not have any permission scopes specified.';
+    }
+    if (helpfulMessage) {
+      if (err &amp;&amp; err.message) {
+        helpfulMessage += ' ' + err.message;
+      }
+
+      if (err) {
+        err.message = helpfulMessage;
+      } else {
+        err = new Error(helpfulMessage);
+        err.code = response.statusCode;
+      }
+    }
+  }
+  callback(err, result, response);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.google-auth-library.computeclient.prototype.createScopedRequired" id="apidoc.element.google-auth-library.computeclient.prototype.createScopedRequired">
+        function <span class="apidocSignatureSpan">google-auth-library.computeclient.prototype.</span>createScopedRequired
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">createScopedRequired = function () {
+  // On compute engine, scopes are specified at the compute instance's creation time,
+  // and cannot be changed. For this reason, always return false.
+  return false;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+var dns = google.dns('v1');
+
+authFactory.getApplicationDefault(function(err, authClient) {
+if (err) {
+  console.log('Authentication failed because of ', err);
+  return;
+}
+if (authClient.createScopedRequired &amp;&amp; authClient.<span class="apidocCodeKeywordSpan">createScopedRequired</span>()) {
+  var scopes = ['https://www.googleapis.com/auth/cloud-platform'];
+  authClient = authClient.createScoped(scopes);
+}
+
+var request = {
+  // TODO: Change placeholders below to values for parameters to the 'get' method:
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.google-auth-library.computeclient.prototype.refreshToken_" id="apidoc.element.google-auth-library.computeclient.prototype.refreshToken_">
+        function <span class="apidocSignatureSpan">google-auth-library.computeclient.prototype.</span>refreshToken_
+        <span class="apidocSignatureSpan">(ignored_, opt_callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">refreshToken_ = function (ignored_, opt_callback) {
+  var uri = this.opts.tokenUrl || Compute.GOOGLE_OAUTH2_TOKEN_URL_;
+  // request for new token
+  this.transporter.request({
+    method: 'GET',
+    uri: uri,
+    json: true
+  }, function(err, tokens, response) {
+    if (!err &amp;&amp; tokens &amp;&amp; tokens.expires_in) {
+      tokens.expiry_date = ((new Date()).getTime() + (tokens.expires_in * 1000));
+      delete tokens.expires_in;
+    }
+
+    if (opt_callback) {
+      opt_callback(err, tokens, response);
+    }
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ * Get the initial access token using gToken.
+ * @param {function=} opt_callback Optional callback.
+ */
+JWT.prototype.authorize = function(opt_callback) {
+var that = this;
+var done = opt_callback || noop;
+
+that.<span class="apidocCodeKeywordSpan">refreshToken_</span>(null, function(err, result) {
+  if (!err) {
+    that.credentials = result;
+    that.credentials.refresh_token = 'jwt-placeholder';
+    that.key = that.gtoken.key;
+    that.email = that.gtoken.iss;
+  }
+  done(err, result);
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.google-auth-library.iam" id="apidoc.module.google-auth-library.iam">module google-auth-library.iam</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.google-auth-library.iam.iam" id="apidoc.element.google-auth-library.iam.iam">
+        function <span class="apidocSignatureSpan">google-auth-library.</span>iam
+        <span class="apidocSignatureSpan">(selector, token)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function IAMAuth(selector, token) {
+  this.selector = selector;
+  this.token = token;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.google-auth-library.iam.prototype" id="apidoc.module.google-auth-library.iam.prototype">module google-auth-library.iam.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.google-auth-library.iam.prototype.createScopedRequired" id="apidoc.element.google-auth-library.iam.prototype.createScopedRequired">
+        function <span class="apidocSignatureSpan">google-auth-library.iam.prototype.</span>createScopedRequired
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">createScopedRequired = function () {
+  // IAM authorization does not use scopes.
+  return false;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+var dns = google.dns('v1');
+
+authFactory.getApplicationDefault(function(err, authClient) {
+if (err) {
+  console.log('Authentication failed because of ', err);
+  return;
+}
+if (authClient.createScopedRequired &amp;&amp; authClient.<span class="apidocCodeKeywordSpan">createScopedRequired</span>()) {
+  var scopes = ['https://www.googleapis.com/auth/cloud-platform'];
+  authClient = authClient.createScoped(scopes);
+}
+
+var request = {
+  // TODO: Change placeholders below to values for parameters to the 'get' method:
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.google-auth-library.iam.prototype.getRequestMetadata" id="apidoc.element.google-auth-library.iam.prototype.getRequestMetadata">
+        function <span class="apidocSignatureSpan">google-auth-library.iam.prototype.</span>getRequestMetadata
+        <span class="apidocSignatureSpan">(unused_uri_, metadataFn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getRequestMetadata = function (unused_uri_, metadataFn) {
+  metadataFn(null, {
+    'x-goog-iam-authority-selector': this.selector,
+    'x-goog-iam-authorization-token': this.token
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ * @param {string} opt_uri the URI being authorized.
+ * @param {function} metadataCb
+ */
+JWT.prototype.getRequestMetadata = function(opt_uri, metadataCb) {
+  if (this.createScopedRequired() &amp;&amp; opt_uri) {
+    // no scopes have been set, but a uri has been provided.  Use JWTAccess credentials.
+    var alt = new JWTAccess(this.email, this.key);
+    return alt.<span class="apidocCodeKeywordSpan">getRequestMetadata</span>(opt_uri, metadataCb);
+  } else {
+    return JWT.super_.prototype.getRequestMetadata.call(
+        this, opt_uri, metadataCb);
+  }
+};
+
+/**
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.google-auth-library.jwtaccess" id="apidoc.module.google-auth-library.jwtaccess">module google-auth-library.jwtaccess</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.google-auth-library.jwtaccess.jwtaccess" id="apidoc.element.google-auth-library.jwtaccess.jwtaccess">
+        function <span class="apidocSignatureSpan">google-auth-library.</span>jwtaccess
+        <span class="apidocSignatureSpan">(email, key)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function JWTAccess(email, key) {
+  this.email = email;
+  this.key = key;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.google-auth-library.jwtaccess.prototype" id="apidoc.module.google-auth-library.jwtaccess.prototype">module google-auth-library.jwtaccess.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.google-auth-library.jwtaccess.prototype._signJWT" id="apidoc.element.google-auth-library.jwtaccess.prototype._signJWT">
+        function <span class="apidocSignatureSpan">google-auth-library.jwtaccess.prototype.</span>_signJWT
+        <span class="apidocSignatureSpan">(assertion, signedJwtFn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_signJWT = function (assertion, signedJwtFn) {
+  try {
+    return signedJwtFn(null, jws.sign(assertion));
+  } catch (err) {
+    return signedJwtFn(err);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+      typ: 'JWT'
+    },
+    payload: payload,
+    secret: this.key
+  };
+
+  // Sign the jwt and invoke metadataCb with it.
+  return this.<span class="apidocCodeKeywordSpan">_signJWT</span>(assertion, function(err, signedJWT) {
+    if (!err) {
+      return metadataCb(null, {'Authorization': 'Bearer ' + signedJWT});
+    } else {
+      return metadataCb(err, null);
+    }
+  });
+};
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.google-auth-library.jwtaccess.prototype.createScopedRequired" id="apidoc.element.google-auth-library.jwtaccess.prototype.createScopedRequired">
+        function <span class="apidocSignatureSpan">google-auth-library.jwtaccess.prototype.</span>createScopedRequired
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">createScopedRequired = function () {
+  // JWT Header authentication does not use scopes.
+  return false;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+var dns = google.dns('v1');
+
+authFactory.getApplicationDefault(function(err, authClient) {
+if (err) {
+  console.log('Authentication failed because of ', err);
+  return;
+}
+if (authClient.createScopedRequired &amp;&amp; authClient.<span class="apidocCodeKeywordSpan">createScopedRequired</span>()) {
+  var scopes = ['https://www.googleapis.com/auth/cloud-platform'];
+  authClient = authClient.createScoped(scopes);
+}
+
+var request = {
+  // TODO: Change placeholders below to values for parameters to the 'get' method:
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.google-auth-library.jwtaccess.prototype.fromJSON" id="apidoc.element.google-auth-library.jwtaccess.prototype.fromJSON">
+        function <span class="apidocSignatureSpan">google-auth-library.jwtaccess.prototype.</span>fromJSON
+        <span class="apidocSignatureSpan">(json, opt_callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">fromJSON = function (json, opt_callback) {
+  var that = this;
+  var done = opt_callback || noop;
+  if (!json) {
+    done(new Error(
+      'Must pass in a JSON object containing the service account auth settings.'));
+    return;
+  }
+  if (!json.client_email) {
+    done(new Error(
+      'The incoming JSON object does not contain a client_email field'));
+    return;
+  }
+  if (!json.private_key) {
+    done(new Error(
+      'The incoming JSON object does not contain a private_key field'));
+    return;
+  }
+  // Extract the relevant information from the json key file.
+  that.email = json.client_email;
+  that.key = json.private_key;
+  that.projectId = json.project_id;
+  done();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  stream.setEncoding('utf8');
+  stream.on('data', function (chunk) {
+    s += chunk;
+  });
+  stream.on('end', function () {
+    try {
+      var data = JSON.parse(s);
+      that.<span class="apidocCodeKeywordSpan">fromJSON</span>(data, opt_callback);
+    } catch (err) {
+      done(err);
+    }
+  });
+};
+
+/**
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.google-auth-library.jwtaccess.prototype.fromStream" id="apidoc.element.google-auth-library.jwtaccess.prototype.fromStream">
+        function <span class="apidocSignatureSpan">google-auth-library.jwtaccess.prototype.</span>fromStream
+        <span class="apidocSignatureSpan">(stream, opt_callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">fromStream = function (stream, opt_callback) {
+  var that = this;
+  var done = opt_callback || noop;
+  if (!stream) {
+    process.nextTick(function() {
+        done(
+            new Error('Must pass in a stream containing the service account auth settings.'));
+    });
+    return;
+  }
+  var s = '';
+  stream.setEncoding('utf8');
+  stream.on('data', function (chunk) {
+    s += chunk;
+  });
+  stream.on('end', function () {
+    try {
+      var data = JSON.parse(s);
+      that.fromJSON(data, opt_callback);
+    } catch (err) {
+      done(err);
+    }
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.google-auth-library.jwtaccess.prototype.getRequestMetadata" id="apidoc.element.google-auth-library.jwtaccess.prototype.getRequestMetadata">
+        function <span class="apidocSignatureSpan">google-auth-library.jwtaccess.prototype.</span>getRequestMetadata
+        <span class="apidocSignatureSpan">(authURI, metadataCb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getRequestMetadata = function (authURI, metadataCb) {
+  var iat = Math.floor(new Date().getTime() / 1000);
+  var exp = iat + 3600; // 3600 seconds = 1 hour
+
+  // The payload used for signed JWT headers has:
+  // iss == sub == &lt;client email&gt;
+  // aud == &lt;the authorization uri&gt;
+  var payload = {
+    iss: this.email,
+    sub: this.email,
+    aud: authURI,
+    exp: exp,
+    iat: iat
+  };
+  var assertion = {
+    header: {
+      alg: 'RS256',
+      typ: 'JWT'
+    },
+    payload: payload,
+    secret: this.key
+  };
+
+  // Sign the jwt and invoke metadataCb with it.
+  return this._signJWT(assertion, function(err, signedJWT) {
+    if (!err) {
+      return metadataCb(null, {'Authorization': 'Bearer ' + signedJWT});
+    } else {
+      return metadataCb(err, null);
+    }
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ * @param {string} opt_uri the URI being authorized.
+ * @param {function} metadataCb
+ */
+JWT.prototype.getRequestMetadata = function(opt_uri, metadataCb) {
+  if (this.createScopedRequired() &amp;&amp; opt_uri) {
+    // no scopes have been set, but a uri has been provided.  Use JWTAccess credentials.
+    var alt = new JWTAccess(this.email, this.key);
+    return alt.<span class="apidocCodeKeywordSpan">getRequestMetadata</span>(opt_uri, metadataCb);
+  } else {
+    return JWT.super_.prototype.getRequestMetadata.call(
+        this, opt_uri, metadataCb);
+  }
+};
+
+/**
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.google-auth-library.jwtclient" id="apidoc.module.google-auth-library.jwtclient">module google-auth-library.jwtclient</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.google-auth-library.jwtclient.jwtclient" id="apidoc.element.google-auth-library.jwtclient.jwtclient">
+        function <span class="apidocSignatureSpan">google-auth-library.</span>jwtclient
+        <span class="apidocSignatureSpan">(email, keyFile, key, scopes, subject)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function JWT(email, keyFile, key, scopes, subject) {
+  JWT.super_.call(this);
+  this.email = email;
+  this.keyFile = keyFile;
+  this.key = key;
+  this.scopes = scopes;
+  this.subject = subject;
+  this.gToken = gToken;
+
+  this.credentials = {
+    refresh_token: 'jwt-placeholder',
+    expiry_date: 1
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.google-auth-library.jwtclient.super_" id="apidoc.element.google-auth-library.jwtclient.super_">
+        function <span class="apidocSignatureSpan">google-auth-library.jwtclient.</span>super_
+        <span class="apidocSignatureSpan">(clientId, clientSecret, redirectUri, opt_opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function OAuth2Client(clientId, clientSecret, redirectUri, opt_opts) {
+  OAuth2Client.super_.call(this);
+
+  this.clientId_ = clientId;
+  this.clientSecret_ = clientSecret;
+  this.redirectUri_ = redirectUri;
+  this.opts = opt_opts || {};
+  this.credentials = {};
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.google-auth-library.jwtclient.prototype" id="apidoc.module.google-auth-library.jwtclient.prototype">module google-auth-library.jwtclient.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.google-auth-library.jwtclient.prototype._createGToken" id="apidoc.element.google-auth-library.jwtclient.prototype._createGToken">
+        function <span class="apidocSignatureSpan">google-auth-library.jwtclient.prototype.</span>_createGToken
+        <span class="apidocSignatureSpan">(callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_createGToken = function (callback) {
+  if (this.gtoken) {
+    return callback(null, this.gtoken);
+  } else {
+    this.gtoken = this.gToken({
+      iss: this.email,
+      sub: this.subject,
+      scope: this.scopes,
+      keyFile: this.keyFile,
+      key: this.key
+    });
+    return callback(null, this.gtoken);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ * @param {object=} ignored_
+ * @param {function=} opt_callback Optional callback.
+ * @private
+ */
+JWT.prototype.refreshToken_ = function(ignored_, opt_callback) {
+var done = opt_callback || noop;
+
+return this.<span class="apidocCodeKeywordSpan">_createGToken</span>(function(err, gToken) {
+  if (err) {
+    return done(err);
+  } else {
+    return gToken.getToken(function (err, token) {
+      return done(err, {
+        access_token: token,
+        token_type: 'Bearer',
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.google-auth-library.jwtclient.prototype.authorize" id="apidoc.element.google-auth-library.jwtclient.prototype.authorize">
+        function <span class="apidocSignatureSpan">google-auth-library.jwtclient.prototype.</span>authorize
+        <span class="apidocSignatureSpan">(opt_callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">authorize = function (opt_callback) {
+  var that = this;
+  var done = opt_callback || noop;
+
+  that.refreshToken_(null, function(err, result) {
+    if (!err) {
+      that.credentials = result;
+      that.credentials.refresh_token = 'jwt-placeholder';
+      that.key = that.gtoken.key;
+      that.email = that.gtoken.iss;
+    }
+    done(err, result);
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.google-auth-library.jwtclient.prototype.createScoped" id="apidoc.element.google-auth-library.jwtclient.prototype.createScoped">
+        function <span class="apidocSignatureSpan">google-auth-library.jwtclient.prototype.</span>createScoped
+        <span class="apidocSignatureSpan">(scopes)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">createScoped = function (scopes) {
+  return new JWT(this.email, this.keyFile, this.key, scopes, this.subject);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+authFactory.getApplicationDefault(function(err, authClient) {
+  if (err) {
+console.log('Authentication failed because of ', err);
+return;
+  }
+  if (authClient.createScopedRequired &amp;&amp; authClient.createScopedRequired()) {
+var scopes = ['https://www.googleapis.com/auth/cloud-platform'];
+authClient = authClient.<span class="apidocCodeKeywordSpan">createScoped</span>(scopes);
+  }
+
+  var request = {
+// TODO: Change placeholders below to values for parameters to the 'get' method:
+
+// Identifies the project addressed by this request.
+project: "",
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.google-auth-library.jwtclient.prototype.createScopedRequired" id="apidoc.element.google-auth-library.jwtclient.prototype.createScopedRequired">
+        function <span class="apidocSignatureSpan">google-auth-library.jwtclient.prototype.</span>createScopedRequired
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">createScopedRequired = function () {
+  // If scopes is null, always return true.
+  if (this.scopes) {
+    // For arrays, check the array length.
+    if (this.scopes instanceof Array) {
+      return this.scopes.length === 0;
+    }
+
+    // For others, convert to a string and check the length.
+    return String(this.scopes).length === 0;
+  }
+
+  return true;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+var dns = google.dns('v1');
+
+authFactory.getApplicationDefault(function(err, authClient) {
+if (err) {
+  console.log('Authentication failed because of ', err);
+  return;
+}
+if (authClient.createScopedRequired &amp;&amp; authClient.<span class="apidocCodeKeywordSpan">createScopedRequired</span>()) {
+  var scopes = ['https://www.googleapis.com/auth/cloud-platform'];
+  authClient = authClient.createScoped(scopes);
+}
+
+var request = {
+  // TODO: Change placeholders below to values for parameters to the 'get' method:
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.google-auth-library.jwtclient.prototype.fromJSON" id="apidoc.element.google-auth-library.jwtclient.prototype.fromJSON">
+        function <span class="apidocSignatureSpan">google-auth-library.jwtclient.prototype.</span>fromJSON
+        <span class="apidocSignatureSpan">(json, opt_callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">fromJSON = function (json, opt_callback) {
+  var that = this;
+  var done = opt_callback || noop;
+  if (!json) {
+    done(new Error(
+      'Must pass in a JSON object containing the service account auth settings.'));
+    return;
+  }
+  if (!json.client_email) {
+    done(new Error(
+      'The incoming JSON object does not contain a client_email field'));
+    return;
+  }
+  if (!json.private_key) {
+    done(new Error(
+      'The incoming JSON object does not contain a private_key field'));
+    return;
+  }
+  // Extract the relevant information from the json key file.
+  that.email = json.client_email;
+  that.key = json.private_key;
+  that.projectId = json.project_id;
+  done();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  stream.setEncoding('utf8');
+  stream.on('data', function (chunk) {
+    s += chunk;
+  });
+  stream.on('end', function () {
+    try {
+      var data = JSON.parse(s);
+      that.<span class="apidocCodeKeywordSpan">fromJSON</span>(data, opt_callback);
+    } catch (err) {
+      done(err);
+    }
+  });
+};
+
+/**
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.google-auth-library.jwtclient.prototype.fromStream" id="apidoc.element.google-auth-library.jwtclient.prototype.fromStream">
+        function <span class="apidocSignatureSpan">google-auth-library.jwtclient.prototype.</span>fromStream
+        <span class="apidocSignatureSpan">(stream, opt_callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">fromStream = function (stream, opt_callback) {
+  var that = this;
+  var done = opt_callback || noop;
+
+  if (!stream) {
+    process.nextTick(function() {
+      done(
+        new Error('Must pass in a stream containing the service account auth settings.'));
+    });
+    return;
+  }
+  var s = '';
+  stream.setEncoding('utf8');
+  stream.on('data', function (chunk) {
+    s += chunk;
+  });
+  stream.on('end', function () {
+    try {
+      var data = JSON.parse(s);
+      that.fromJSON(data, opt_callback);
+    } catch (err) {
+      done(err);
+    }
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.google-auth-library.jwtclient.prototype.getRequestMetadata" id="apidoc.element.google-auth-library.jwtclient.prototype.getRequestMetadata">
+        function <span class="apidocSignatureSpan">google-auth-library.jwtclient.prototype.</span>getRequestMetadata
+        <span class="apidocSignatureSpan">(opt_uri, metadataCb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getRequestMetadata = function (opt_uri, metadataCb) {
+  if (this.createScopedRequired() &amp;&amp; opt_uri) {
+    // no scopes have been set, but a uri has been provided.  Use JWTAccess credentials.
+    var alt = new JWTAccess(this.email, this.key);
+    return alt.getRequestMetadata(opt_uri, metadataCb);
+  } else {
+    return JWT.super_.prototype.getRequestMetadata.call(
+        this, opt_uri, metadataCb);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ * @param {string} opt_uri the URI being authorized.
+ * @param {function} metadataCb
+ */
+JWT.prototype.getRequestMetadata = function(opt_uri, metadataCb) {
+  if (this.createScopedRequired() &amp;&amp; opt_uri) {
+    // no scopes have been set, but a uri has been provided.  Use JWTAccess credentials.
+    var alt = new JWTAccess(this.email, this.key);
+    return alt.<span class="apidocCodeKeywordSpan">getRequestMetadata</span>(opt_uri, metadataCb);
+  } else {
+    return JWT.super_.prototype.getRequestMetadata.call(
+        this, opt_uri, metadataCb);
+  }
+};
+
+/**
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.google-auth-library.jwtclient.prototype.refreshToken_" id="apidoc.element.google-auth-library.jwtclient.prototype.refreshToken_">
+        function <span class="apidocSignatureSpan">google-auth-library.jwtclient.prototype.</span>refreshToken_
+        <span class="apidocSignatureSpan">(ignored_, opt_callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">refreshToken_ = function (ignored_, opt_callback) {
+  var done = opt_callback || noop;
+
+  return this._createGToken(function(err, gToken) {
+    if (err) {
+      return done(err);
+    } else {
+      return gToken.getToken(function (err, token) {
+        return done(err, {
+          access_token: token,
+          token_type: 'Bearer',
+          expiry_date: gToken.expires_at
+        });
+      });
+    }
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ * Get the initial access token using gToken.
+ * @param {function=} opt_callback Optional callback.
+ */
+JWT.prototype.authorize = function(opt_callback) {
+var that = this;
+var done = opt_callback || noop;
+
+that.<span class="apidocCodeKeywordSpan">refreshToken_</span>(null, function(err, result) {
+  if (!err) {
+    that.credentials = result;
+    that.credentials.refresh_token = 'jwt-placeholder';
+    that.key = that.gtoken.key;
+    that.email = that.gtoken.iss;
+  }
+  done(err, result);
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.google-auth-library.loginticket" id="apidoc.module.google-auth-library.loginticket">module google-auth-library.loginticket</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.google-auth-library.loginticket.loginticket" id="apidoc.element.google-auth-library.loginticket.loginticket">
+        function <span class="apidocSignatureSpan">google-auth-library.</span>loginticket
+        <span class="apidocSignatureSpan">(env, pay)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function LoginTicket(env, pay) {
+  var envelope = env;
+  var payload = pay;
+
+  this.getEnvelope = function() {
+    return envelope;
+  };
+
+  this.getPayload = function() {
+    return payload;
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.google-auth-library.loginticket.prototype" id="apidoc.module.google-auth-library.loginticket.prototype">module google-auth-library.loginticket.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.google-auth-library.loginticket.prototype.getAttributes" id="apidoc.element.google-auth-library.loginticket.prototype.getAttributes">
+        function <span class="apidocSignatureSpan">google-auth-library.loginticket.prototype.</span>getAttributes
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getAttributes = function () {
+  return {
+    'envelope': this.getEnvelope(),
+    'payload': this.getPayload()
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.google-auth-library.loginticket.prototype.getUserId" id="apidoc.element.google-auth-library.loginticket.prototype.getUserId">
+        function <span class="apidocSignatureSpan">google-auth-library.loginticket.prototype.</span>getUserId
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getUserId = function () {
+  var payload = this.getPayload();
+  if (payload &amp;&amp; payload[USER_ATTR]) {
+    return payload[USER_ATTR];
+  }
+
+  return null;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.google-auth-library.oauth2client" id="apidoc.module.google-auth-library.oauth2client">module google-auth-library.oauth2client</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.google-auth-library.oauth2client.oauth2client" id="apidoc.element.google-auth-library.oauth2client.oauth2client">
+        function <span class="apidocSignatureSpan">google-auth-library.</span>oauth2client
+        <span class="apidocSignatureSpan">(clientId, clientSecret, redirectUri, opt_opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function OAuth2Client(clientId, clientSecret, redirectUri, opt_opts) {
+  OAuth2Client.super_.call(this);
+
+  this.clientId_ = clientId;
+  this.clientSecret_ = clientSecret;
+  this.redirectUri_ = redirectUri;
+  this.opts = opt_opts || {};
+  this.credentials = {};
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.google-auth-library.oauth2client.super_" id="apidoc.element.google-auth-library.oauth2client.super_">
+        function <span class="apidocSignatureSpan">google-auth-library.oauth2client.</span>super_
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function AuthClient() {
+  this.transporter = new DefaultTransporter();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.google-auth-library.oauth2client.prototype" id="apidoc.module.google-auth-library.oauth2client.prototype">module google-auth-library.oauth2client.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.google-auth-library.oauth2client.prototype._makeRequest" id="apidoc.element.google-auth-library.oauth2client.prototype._makeRequest">
+        function <span class="apidocSignatureSpan">google-auth-library.oauth2client.prototype.</span>_makeRequest
+        <span class="apidocSignatureSpan">(opts, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_makeRequest = function (opts, callback) {
+  return this.transporter.request(opts, callback);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    if (err) {
+      postRequestCb(err, null, response);
+    } else {
+      if (headers) {
+        opts.headers = opts.headers || {};
+        opts.headers.Authorization = headers.Authorization;
+      }
+      return that.<span class="apidocCodeKeywordSpan">_makeRequest</span>(opts, postRequestCb);
+    }
+  };
+
+  var unusedUri = null;
+  return this.getRequestMetadata(unusedUri, authCb);
+};
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.google-auth-library.oauth2client.prototype._postRequest" id="apidoc.element.google-auth-library.oauth2client.prototype._postRequest">
+        function <span class="apidocSignatureSpan">google-auth-library.oauth2client.prototype.</span>_postRequest
+        <span class="apidocSignatureSpan">(err, result, response, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_postRequest = function (err, result, response, callback) {
+  callback(err, result, response);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+     * fix the failure, then refreshing again probably won't help */
+    retry = false;
+    // Force token refresh
+    that.refreshAccessToken(function() {
+      that.getRequestMetadata(unusedUri, authCb);
+    });
+  } else {
+    that.<span class="apidocCodeKeywordSpan">_postRequest</span>(err, body, resp, callback);
+  }
+};
+
+var authCb = function(err, headers, response) {
+  if (err) {
+    postRequestCb(err, null, response);
+  } else {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.google-auth-library.oauth2client.prototype.decodeBase64" id="apidoc.element.google-auth-library.oauth2client.prototype.decodeBase64">
+        function <span class="apidocSignatureSpan">google-auth-library.oauth2client.prototype.</span>decodeBase64
+        <span class="apidocSignatureSpan">(b64String)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">decodeBase64 = function (b64String) {
+  var buffer = new Buffer(b64String, 'base64');
+  return buffer.toString('utf8');
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+}
+var signed = segments[0] + '.' + segments[1];
+
+var signature = segments[2];
+
+var envelope, payload;
+try {
+  envelope = JSON.parse(this.<span class="apidocCodeKeywordSpan">decodeBase64</span>(segments[0]));
+} catch (err) { }
+
+if (!envelope) {
+  throw new Error('Can\'t parse token envelope: ' + segments[0]);
+}
+
+try {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.google-auth-library.oauth2client.prototype.generateAuthUrl" id="apidoc.element.google-auth-library.oauth2client.prototype.generateAuthUrl">
+        function <span class="apidocSignatureSpan">google-auth-library.oauth2client.prototype.</span>generateAuthUrl
+        <span class="apidocSignatureSpan">(opt_opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">generateAuthUrl = function (opt_opts) {
+  var opts = opt_opts || {};
+  opts.response_type = opts.response_type || 'code';
+  opts.client_id = opts.client_id || this.clientId_;
+  opts.redirect_uri = opts.redirect_uri || this.redirectUri_;
+
+  // Allow scopes to be passed either as array or a string
+  if (opts.scope instanceof Array) {
+    opts.scope = opts.scope.join(' ');
+  }
+
+  var rootUrl = this.opts.authBaseUrl ||
+    OAuth2Client.GOOGLE_OAUTH2_AUTH_BASE_URL_;
+
+  return rootUrl + '?' + querystring.stringify(opts);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.google-auth-library.oauth2client.prototype.getAccessToken" id="apidoc.element.google-auth-library.oauth2client.prototype.getAccessToken">
+        function <span class="apidocSignatureSpan">google-auth-library.oauth2client.prototype.</span>getAccessToken
+        <span class="apidocSignatureSpan">(callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getAccessToken = function (callback) {
+  var credentials = this.credentials;
+  var expiryDate = credentials.expiry_date;
+
+  // if no expiry time, assume it's not expired
+  var isTokenExpired = expiryDate ? expiryDate &lt;= (new Date()).getTime() : false;
+
+  if (!credentials.access_token &amp;&amp; !credentials.refresh_token) {
+    return callback(new Error('No access or refresh token is set.'), null);
+  }
+
+  var shouldRefresh = !credentials.access_token || isTokenExpired;
+  if (shouldRefresh &amp;&amp; credentials.refresh_token) {
+    if (!this.credentials.refresh_token) {
+      return callback(new Error('No refresh token is set.'), null);
+    }
+
+    this.refreshAccessToken(function(err, tokens, response) {
+      if (err) {
+        return callback(err, null, response);
+      }
+      if (!tokens || (tokens &amp;&amp; !tokens.access_token)) {
+        return callback(new Error('Could not refresh access token.'), null, response);
+      }
+      return callback(null, tokens.access_token, response);
+    });
+  } else {
+    return callback(null, credentials.access_token, null);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.google-auth-library.oauth2client.prototype.getFederatedSignonCerts" id="apidoc.element.google-auth-library.oauth2client.prototype.getFederatedSignonCerts">
+        function <span class="apidocSignatureSpan">google-auth-library.oauth2client.prototype.</span>getFederatedSignonCerts
+        <span class="apidocSignatureSpan">(callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getFederatedSignonCerts = function (callback) {
+  var nowTime = (new Date()).getTime();
+  if (certificateExpiry &amp;&amp; (nowTime &lt; certificateExpiry.getTime())) {
+    callback(null, certificateCache);
+    return;
+  }
+
+  this.transporter.request({
+    method: 'GET',
+    uri: OAuth2Client.GOOGLE_OAUTH2_FEDERATED_SIGNON_CERTS_URL_,
+    json: true
+  }, function(err, body, response) {
+    if (err) {
+      callback('Failed to retrieve verification certificates: ' + err, null, response);
+      return;
+    }
+
+    var cacheControl = response.headers['cache-control'];
+    var cacheAge = -1;
+    if (cacheControl) {
+      var pattern = new RegExp('max-age=([0-9]*)');
+      var regexResult = pattern.exec(cacheControl);
+      if (regexResult.length === 2) {
+        // Cache results with max-age (in seconds)
+        cacheAge = regexResult[1] * 1000; // milliseconds
+      }
+    }
+
+    var now = new Date();
+    certificateExpiry = cacheAge === -1 ? null : new Date(now.getTime() + cacheAge);
+    certificateCache = body;
+    callback(null, body, response);
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ */
+OAuth2Client.prototype.verifyIdToken = function(idToken, audience, callback) {
+if (!idToken || !callback) {
+  throw new Error('The verifyIdToken method requires both ' +
+    'an ID Token and a callback method');
+}
+
+this.<span class="apidocCodeKeywordSpan">getFederatedSignonCerts</span>(function(err, certs) {
+  if (err) {
+    callback(err, null);
+  }
+  var login;
+  try {
+    login = this.verifySignedJwtWithCerts(idToken, certs, audience,
+      OAuth2Client.ISSUERS_);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.google-auth-library.oauth2client.prototype.getRequestMetadata" id="apidoc.element.google-auth-library.oauth2client.prototype.getRequestMetadata">
+        function <span class="apidocSignatureSpan">google-auth-library.oauth2client.prototype.</span>getRequestMetadata
+        <span class="apidocSignatureSpan">(opt_uri, metadataCb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getRequestMetadata = function (opt_uri, metadataCb) {
+  var that = this;
+  var thisCreds = this.credentials;
+
+  if (!thisCreds.access_token &amp;&amp; !thisCreds.refresh_token) {
+    return metadataCb(new Error('No access or refresh token is set.'), null);
+  }
+
+  // if no expiry time, assume it's not expired
+  var expiryDate = thisCreds.expiry_date;
+  var isTokenExpired = expiryDate ? expiryDate &lt;= (new Date()).getTime() : false;
+
+  if (thisCreds.access_token &amp;&amp; !isTokenExpired) {
+    thisCreds.token_type = thisCreds.token_type || 'Bearer';
+    var headers = {'Authorization': thisCreds.token_type + ' ' + thisCreds.access_token };
+    return metadataCb(null, headers , null);
+  }
+
+  return this.refreshToken_(thisCreds.refresh_token, function(err, tokens, response) {
+    if (err) {
+      return metadataCb(err, null, response);
+    } else {
+      if (!tokens || (tokens &amp;&amp; !tokens.access_token)) {
+        return metadataCb(new Error('Could not refresh access token.'), null, response);
+      }
+
+      var credentials = that.credentials;
+      credentials.token_type = credentials.token_type || 'Bearer';
+      tokens.refresh_token = credentials.refresh_token;
+      that.credentials = tokens;
+      var headers = {'Authorization': credentials.token_type + ' ' + tokens.access_token };
+      return metadataCb(err, headers , response);
+    }
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ * @param {string} opt_uri the URI being authorized.
+ * @param {function} metadataCb
+ */
+JWT.prototype.getRequestMetadata = function(opt_uri, metadataCb) {
+  if (this.createScopedRequired() &amp;&amp; opt_uri) {
+    // no scopes have been set, but a uri has been provided.  Use JWTAccess credentials.
+    var alt = new JWTAccess(this.email, this.key);
+    return alt.<span class="apidocCodeKeywordSpan">getRequestMetadata</span>(opt_uri, metadataCb);
+  } else {
+    return JWT.super_.prototype.getRequestMetadata.call(
+        this, opt_uri, metadataCb);
+  }
+};
+
+/**
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.google-auth-library.oauth2client.prototype.getToken" id="apidoc.element.google-auth-library.oauth2client.prototype.getToken">
+        function <span class="apidocSignatureSpan">google-auth-library.oauth2client.prototype.</span>getToken
+        <span class="apidocSignatureSpan">(code, opt_callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getToken = function (code, opt_callback) {
+  var uri = this.opts.tokenUrl || OAuth2Client.GOOGLE_OAUTH2_TOKEN_URL_;
+  var values = {
+    code: code,
+    client_id: this.clientId_,
+    client_secret: this.clientSecret_,
+    redirect_uri: this.redirectUri_,
+    grant_type: 'authorization_code'
+  };
+
+  this.transporter.request({
+    method: 'POST',
+    uri: uri,
+    form: values,
+    json: true
+  }, function(err, tokens, response) {
+    if (!err &amp;&amp; tokens &amp;&amp; tokens.expires_in) {
+      tokens.expiry_date = ((new Date()).getTime() + (tokens.expires_in * 1000));
+      delete tokens.expires_in;
+    }
+    var done = opt_callback || noop;
+    done(err, tokens, response);
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+JWT.prototype.refreshToken_ = function(ignored_, opt_callback) {
+var done = opt_callback || noop;
+
+return this._createGToken(function(err, gToken) {
+  if (err) {
+    return done(err);
+  } else {
+    return gToken.<span class="apidocCodeKeywordSpan">getToken</span>(function (err, token) {
+      return done(err, {
+        access_token: token,
+        token_type: 'Bearer',
+        expiry_date: gToken.expires_at
+      });
+    });
+  }
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.google-auth-library.oauth2client.prototype.refreshAccessToken" id="apidoc.element.google-auth-library.oauth2client.prototype.refreshAccessToken">
+        function <span class="apidocSignatureSpan">google-auth-library.oauth2client.prototype.</span>refreshAccessToken
+        <span class="apidocSignatureSpan">(callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">refreshAccessToken = function (callback) {
+  var that = this;
+
+  if (!this.credentials.refresh_token) {
+    callback(new Error('No refresh token is set.'), null);
+    return;
+  }
+
+  this.refreshToken_(this.credentials.refresh_token, function(err, result, response) {
+    if (err) {
+      callback(err, null, response);
+    } else {
+      var tokens = result;
+      tokens.refresh_token = that.credentials.refresh_token;
+      that.credentials = tokens;
+      callback(null, that.credentials, response);
+    }
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+  var shouldRefresh = !credentials.access_token || isTokenExpired;
+  if (shouldRefresh &amp;&amp; credentials.refresh_token) {
+if (!this.credentials.refresh_token) {
+  return callback(new Error('No refresh token is set.'), null);
+}
+
+this.<span class="apidocCodeKeywordSpan">refreshAccessToken</span>(function(err, tokens, response) {
+  if (err) {
+    return callback(err, null, response);
+  }
+  if (!tokens || (tokens &amp;&amp; !tokens.access_token)) {
+    return callback(new Error('Could not refresh access token.'), null, response);
+  }
+  return callback(null, tokens.access_token, response);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.google-auth-library.oauth2client.prototype.refreshToken_" id="apidoc.element.google-auth-library.oauth2client.prototype.refreshToken_">
+        function <span class="apidocSignatureSpan">google-auth-library.oauth2client.prototype.</span>refreshToken_
+        <span class="apidocSignatureSpan">(refresh_token, opt_callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">refreshToken_ = function (refresh_token, opt_callback) {
+  var uri = this.opts.tokenUrl || OAuth2Client.GOOGLE_OAUTH2_TOKEN_URL_;
+  var values = {
+    refresh_token: refresh_token,
+    client_id: this.clientId_,
+    client_secret: this.clientSecret_,
+    grant_type: 'refresh_token'
+  };
+
+  // request for new token
+  return this.transporter.request({
+    method: 'POST',
+    uri: uri,
+    form: values,
+    json: true
+  }, function(err, tokens, response) {
+    if (!err &amp;&amp; tokens &amp;&amp; tokens.expires_in) {
+      tokens.expiry_date = ((new Date()).getTime() + (tokens.expires_in * 1000));
+      delete tokens.expires_in;
+    }
+    var done = opt_callback || noop;
+    done(err, tokens, response);
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ * Get the initial access token using gToken.
+ * @param {function=} opt_callback Optional callback.
+ */
+JWT.prototype.authorize = function(opt_callback) {
+var that = this;
+var done = opt_callback || noop;
+
+that.<span class="apidocCodeKeywordSpan">refreshToken_</span>(null, function(err, result) {
+  if (!err) {
+    that.credentials = result;
+    that.credentials.refresh_token = 'jwt-placeholder';
+    that.key = that.gtoken.key;
+    that.email = that.gtoken.iss;
+  }
+  done(err, result);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.google-auth-library.oauth2client.prototype.request" id="apidoc.element.google-auth-library.oauth2client.prototype.request">
+        function <span class="apidocSignatureSpan">google-auth-library.oauth2client.prototype.</span>request
+        <span class="apidocSignatureSpan">(opts, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">request = function (opts, callback) {
+<span class="apidocCodeCommentSpan">  /* jshint latedef:false */
+</span>  var that = this;
+
+  // Callbacks will close over this to ensure that we only retry once
+  var retry = true;
+
+  // Hook the callback routine to call the _postRequest method.
+  var postRequestCb = function(err, body, resp) {
+    var statusCode = resp &amp;&amp; resp.statusCode;
+    // Automatically retry 401 and 403 responses
+    // if err is set and is unrelated to response
+    // then getting credentials failed, and retrying won't help
+    if (retry &amp;&amp; (statusCode === 401 || statusCode === 403) &amp;&amp;
+        (!err || err.code === statusCode)) {
+      /* It only makes sense to retry once, because the retry is intended to
+       * handle expiration-related failures. If refreshing the token does not
+       * fix the failure, then refreshing again probably won't help */
+      retry = false;
+      // Force token refresh
+      that.refreshAccessToken(function() {
+        that.getRequestMetadata(unusedUri, authCb);
+      });
+    } else {
+      that._postRequest(err, body, resp, callback);
+    }
+  };
+
+  var authCb = function(err, headers, response) {
+    if (err) {
+      postRequestCb(err, null, response);
+    } else {
+      if (headers) {
+        opts.headers = opts.headers || {};
+        opts.headers.Authorization = headers.Authorization;
+      }
+      return that._makeRequest(opts, postRequestCb);
+    }
+  };
+
+  var unusedUri = null;
+  return this.getRequestMetadata(unusedUri, authCb);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ * @param {object=} ignored_
+ * @param {function=} opt_callback Optional callback.
+ * @private
+ */
+Compute.prototype.refreshToken_ = function(ignored_, opt_callback) {
+var uri = this.opts.tokenUrl || Compute.GOOGLE_OAUTH2_TOKEN_URL_;
+// request for new token
+this.transporter.<span class="apidocCodeKeywordSpan">request</span>({
+  method: 'GET',
+  uri: uri,
+  json: true
+}, function(err, tokens, response) {
+  if (!err &amp;&amp; tokens &amp;&amp; tokens.expires_in) {
+    tokens.expiry_date = ((new Date()).getTime() + (tokens.expires_in * 1000));
+    delete tokens.expires_in;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.google-auth-library.oauth2client.prototype.revokeCredentials" id="apidoc.element.google-auth-library.oauth2client.prototype.revokeCredentials">
+        function <span class="apidocSignatureSpan">google-auth-library.oauth2client.prototype.</span>revokeCredentials
+        <span class="apidocSignatureSpan">(callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">revokeCredentials = function (callback) {
+  var token = this.credentials.access_token;
+  this.credentials = {};
+  if (token) {
+    this.revokeToken(token, callback);
+  } else {
+    callback(new Error('No access token to revoke.'), null);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.google-auth-library.oauth2client.prototype.revokeToken" id="apidoc.element.google-auth-library.oauth2client.prototype.revokeToken">
+        function <span class="apidocSignatureSpan">google-auth-library.oauth2client.prototype.</span>revokeToken
+        <span class="apidocSignatureSpan">(token, opt_callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">revokeToken = function (token, opt_callback) {
+  this.transporter.request({
+    uri: OAuth2Client.GOOGLE_OAUTH2_REVOKE_URL_ +
+      '?' + querystring.stringify({ token: token }),
+    json: true
+  }, opt_callback);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+* Revokes access token and clears the credentials object
+* @param  {Function=} callback callback
+*/
+OAuth2Client.prototype.revokeCredentials = function(callback) {
+ var token = this.credentials.access_token;
+ this.credentials = {};
+ if (token) {
+   this.<span class="apidocCodeKeywordSpan">revokeToken</span>(token, callback);
+ } else {
+   callback(new Error('No access token to revoke.'), null);
+ }
+};
+
+/**
+* Provides a request implementation with OAuth 2.0 flow.
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.google-auth-library.oauth2client.prototype.verifyIdToken" id="apidoc.element.google-auth-library.oauth2client.prototype.verifyIdToken">
+        function <span class="apidocSignatureSpan">google-auth-library.oauth2client.prototype.</span>verifyIdToken
+        <span class="apidocSignatureSpan">(idToken, audience, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">verifyIdToken = function (idToken, audience, callback) {
+  if (!idToken || !callback) {
+    throw new Error('The verifyIdToken method requires both ' +
+      'an ID Token and a callback method');
+  }
+
+  this.getFederatedSignonCerts(function(err, certs) {
+    if (err) {
+      callback(err, null);
+    }
+    var login;
+    try {
+      login = this.verifySignedJwtWithCerts(idToken, certs, audience,
+        OAuth2Client.ISSUERS_);
+    } catch (err) {
+      callback(err);
+      return;
+    }
+
+    callback(null, login);
+  }.bind(this));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.google-auth-library.oauth2client.prototype.verifySignedJwtWithCerts" id="apidoc.element.google-auth-library.oauth2client.prototype.verifySignedJwtWithCerts">
+        function <span class="apidocSignatureSpan">google-auth-library.oauth2client.prototype.</span>verifySignedJwtWithCerts
+        <span class="apidocSignatureSpan">(jwt, certs, requiredAudience, issuers, maxExpiry)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">verifySignedJwtWithCerts = function (jwt, certs, requiredAudience, issuers, maxExpiry) {
+
+  if (!maxExpiry) {
+    maxExpiry = OAuth2Client.MAX_TOKEN_LIFETIME_SECS_;
+  }
+
+  var segments = jwt.split('.');
+  if (segments.length !== 3) {
+    throw new Error('Wrong number of segments in token: ' + jwt);
+  }
+  var signed = segments[0] + '.' + segments[1];
+
+  var signature = segments[2];
+
+  var envelope, payload;
+  try {
+    envelope = JSON.parse(this.decodeBase64(segments[0]));
+  } catch (err) { }
+
+  if (!envelope) {
+    throw new Error('Can\'t parse token envelope: ' + segments[0]);
+  }
+
+  try {
+    payload = JSON.parse(this.decodeBase64(segments[1]));
+  } catch (err) { }
+  if (!payload) {
+    throw new Error('Can\'t parse token payload: ' + segments[1]);
+  }
+
+  if (!certs.hasOwnProperty(envelope.kid)) {
+    // If this is not present, then there's no reason to attempt verification
+    throw new Error('No pem found for envelope: ' + JSON.stringify(envelope));
+  }
+  var pem = certs[envelope.kid];
+  var pemVerifier = new PemVerifier();
+  var verified = pemVerifier.verify(pem, signed, signature, 'base64');
+
+  if (!verified) {
+    throw new Error('Invalid token signature: ' + jwt);
+  }
+
+  if (!payload.iat) {
+    throw new Error('No issue time in token: ' + JSON.stringify(payload));
+  }
+
+  if (!payload.exp) {
+    throw new Error('No expiration time in token: ' + JSON.stringify(payload));
+  }
+
+  var iat = parseInt(payload.iat, 10);
+  var exp = parseInt(payload.exp, 10);
+  var now = new Date().getTime() / 1000;
+
+  if (exp &gt;= now + maxExpiry) {
+    throw new Error('Expiration time too far in future: ' +
+      JSON.stringify(payload));
+  }
+
+  var earliest = iat - OAuth2Client.CLOCK_SKEW_SECS_;
+  var latest = exp + OAuth2Client.CLOCK_SKEW_SECS_;
+
+  if (now &lt; earliest) {
+    throw new Error('Token used too early, ' + now + ' &lt; ' + earliest + ': ' +
+      JSON.stringify(payload));
+  }
+
+  if (now &gt; latest) {
+    throw new Error('Token used too late, ' + now + ' &gt; ' + latest + ': ' +
+      JSON.stringify(payload));
+  }
+
+  if (issuers &amp;&amp; issuers.indexOf(payload.iss) &lt; 0) {
+    throw new Error('Invalid issuer, expected one of [' + issuers +
+        '], but got ' + payload.iss);
+  }
+
+  // Check the audience matches if we have one
+  if (typeof requiredAudience !== 'undefined' &amp;&amp; requiredAudience !== null) {
+    var aud = payload.aud;
+    var audVerified = false;
+    //If the requiredAudience is an array, check if it contains token audience
+    if(requiredAudience.constructor === Array)
+    {
+        audVerified = (requiredAudience.indexOf(aud) &gt; -1);
+    }
+    else{
+        audVerified = (aud === requiredAudience);
+    }
+    if (!audVerified) {
+       throw new Error('Wrong recipient, payload audience != requiredAudience');
+    }
+  }
+
+  return new LoginTicket(envelope, payload);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+  this.getFederatedSignonCerts(function(err, certs) {
+if (err) {
+  callback(err, null);
+}
+var login;
+try {
+  login = this.<span class="apidocCodeKeywordSpan">verifySignedJwtWithCerts</span>(idToken, certs, audience,
+    OAuth2Client.ISSUERS_);
+} catch (err) {
+  callback(err);
+  return;
+}
+
+callback(null, login);
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.google-auth-library.refreshclient" id="apidoc.module.google-auth-library.refreshclient">module google-auth-library.refreshclient</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.google-auth-library.refreshclient.refreshclient" id="apidoc.element.google-auth-library.refreshclient.refreshclient">
+        function <span class="apidocSignatureSpan">google-auth-library.</span>refreshclient
+        <span class="apidocSignatureSpan">(clientId, clientSecret, refreshToken)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function UserRefreshClient(clientId, clientSecret, refreshToken) {
+  UserRefreshClient.super_.call(this, clientId, clientSecret);
+  // Named to avoid collision with the method refreshToken_
+  this._refreshToken = refreshToken;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.google-auth-library.refreshclient.super_" id="apidoc.element.google-auth-library.refreshclient.super_">
+        function <span class="apidocSignatureSpan">google-auth-library.refreshclient.</span>super_
+        <span class="apidocSignatureSpan">(clientId, clientSecret, redirectUri, opt_opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function OAuth2Client(clientId, clientSecret, redirectUri, opt_opts) {
+  OAuth2Client.super_.call(this);
+
+  this.clientId_ = clientId;
+  this.clientSecret_ = clientSecret;
+  this.redirectUri_ = redirectUri;
+  this.opts = opt_opts || {};
+  this.credentials = {};
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.google-auth-library.refreshclient.prototype" id="apidoc.module.google-auth-library.refreshclient.prototype">module google-auth-library.refreshclient.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.google-auth-library.refreshclient.prototype.fromJSON" id="apidoc.element.google-auth-library.refreshclient.prototype.fromJSON">
+        function <span class="apidocSignatureSpan">google-auth-library.refreshclient.prototype.</span>fromJSON
+        <span class="apidocSignatureSpan">(json, opt_callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">fromJSON = function (json, opt_callback) {
+  var that = this;
+  if (!json) {
+    callback(opt_callback, new Error(
+        'Must pass in a JSON object containing the user refresh token'));
+    return;
+  }
+  if (json.type !== 'authorized_user') {
+    callback(opt_callback, new Error(
+        'The incoming JSON object does not have the "authorized_user" type'));
+    return;
+  }
+  if (!json.client_id) {
+    callback(opt_callback, new Error(
+        'The incoming JSON object does not contain a client_id field'));
+    return;
+  }
+  if (!json.client_secret) {
+    callback(opt_callback, new Error(
+        'The incoming JSON object does not contain a client_secret field'));
+    return;
+  }
+  if (!json.refresh_token) {
+    callback(opt_callback, new Error(
+        'The incoming JSON object does not contain a refresh_token field'));
+    return;
+  }
+  that.clientId_ = json.client_id;
+  that.clientSecret_ = json.client_secret;
+  that._refreshToken = json.refresh_token;
+  that.credentials.refresh_token = json.refresh_token;
+  callback(opt_callback);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  stream.setEncoding('utf8');
+  stream.on('data', function (chunk) {
+    s += chunk;
+  });
+  stream.on('end', function () {
+    try {
+      var data = JSON.parse(s);
+      that.<span class="apidocCodeKeywordSpan">fromJSON</span>(data, opt_callback);
+    } catch (err) {
+      done(err);
+    }
+  });
+};
+
+/**
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.google-auth-library.refreshclient.prototype.fromStream" id="apidoc.element.google-auth-library.refreshclient.prototype.fromStream">
+        function <span class="apidocSignatureSpan">google-auth-library.refreshclient.prototype.</span>fromStream
+        <span class="apidocSignatureSpan">(stream, opt_callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">fromStream = function (stream, opt_callback) {
+  var that = this;
+  if (!stream) {
+    process.nextTick(function() {
+      callback(
+        opt_callback,
+        new Error('Must pass in a stream containing the user refresh token.'));
+    });
+    return;
+  }
+  var s = '';
+  stream.setEncoding('utf8');
+  stream.on('data', function (chunk) {
+    s += chunk;
+  });
+  stream.on('end', function () {
+    try {
+      var data = JSON.parse(s);
+      that.fromJSON(data, opt_callback);
+    } catch (err) {
+      callback(opt_callback, err);
+    }
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.google-auth-library.refreshclient.prototype.refreshToken_" id="apidoc.element.google-auth-library.refreshclient.prototype.refreshToken_">
+        function <span class="apidocSignatureSpan">google-auth-library.refreshclient.prototype.</span>refreshToken_
+        <span class="apidocSignatureSpan">(ignored_, opt_callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">refreshToken_ = function (ignored_, opt_callback) {
+  UserRefreshClient.super_.prototype.refreshToken_.call(
+      this, this._refreshToken, opt_callback);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ * Get the initial access token using gToken.
+ * @param {function=} opt_callback Optional callback.
+ */
+JWT.prototype.authorize = function(opt_callback) {
+var that = this;
+var done = opt_callback || noop;
+
+that.<span class="apidocCodeKeywordSpan">refreshToken_</span>(null, function(err, result) {
+  if (!err) {
+    that.credentials = result;
+    that.credentials.refresh_token = 'jwt-placeholder';
+    that.key = that.gtoken.key;
+    that.email = that.gtoken.iss;
+  }
+  done(err, result);
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.google-auth-library.transporters" id="apidoc.module.google-auth-library.transporters">module google-auth-library.transporters</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.google-auth-library.transporters.transporters" id="apidoc.element.google-auth-library.transporters.transporters">
+        function <span class="apidocSignatureSpan">google-auth-library.</span>transporters
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function DefaultTransporter() {}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.google-auth-library.transporters.prototype" id="apidoc.module.google-auth-library.transporters.prototype">module google-auth-library.transporters.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.google-auth-library.transporters.prototype.configure" id="apidoc.element.google-auth-library.transporters.prototype.configure">
+        function <span class="apidocSignatureSpan">google-auth-library.transporters.prototype.</span>configure
+        <span class="apidocSignatureSpan">(opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">configure = function (opts) {
+  // set transporter user agent
+  opts.headers = opts.headers || {};
+  if (!opts.headers['User-Agent']) {
+    opts.headers['User-Agent'] = this.USER_AGENT;
+  } else if (opts.headers['User-Agent'].indexOf(this.USER_AGENT) === -1) {
+    opts.headers['User-Agent'] = opts.headers['User-Agent'] + ' ' + this.USER_AGENT;
+  }
+  return opts;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+/**
+* Makes a request with given options and invokes callback.
+* @param {object} opts Options.
+* @param {Function=} opt_callback Optional callback.
+* @return {Request} Request object
+*/
+DefaultTransporter.prototype.request = function(opts, opt_callback) {
+ opts = this.<span class="apidocCodeKeywordSpan">configure</span>(opts);
+ return request(opts.uri || opts.url, opts, this.wrapCallback_(opt_callback));
+};
+
+/**
+* Wraps the response callback.
+* @param {Function=} opt_callback Optional callback.
+* @return {Function} Wrapped callback function.
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.google-auth-library.transporters.prototype.request" id="apidoc.element.google-auth-library.transporters.prototype.request">
+        function <span class="apidocSignatureSpan">google-auth-library.transporters.prototype.</span>request
+        <span class="apidocSignatureSpan">(opts, opt_callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">request = function (opts, opt_callback) {
+  opts = this.configure(opts);
+  return request(opts.uri || opts.url, opts, this.wrapCallback_(opt_callback));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ * @param {object=} ignored_
+ * @param {function=} opt_callback Optional callback.
+ * @private
+ */
+Compute.prototype.refreshToken_ = function(ignored_, opt_callback) {
+var uri = this.opts.tokenUrl || Compute.GOOGLE_OAUTH2_TOKEN_URL_;
+// request for new token
+this.transporter.<span class="apidocCodeKeywordSpan">request</span>({
+  method: 'GET',
+  uri: uri,
+  json: true
+}, function(err, tokens, response) {
+  if (!err &amp;&amp; tokens &amp;&amp; tokens.expires_in) {
+    tokens.expiry_date = ((new Date()).getTime() + (tokens.expires_in * 1000));
+    delete tokens.expires_in;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.google-auth-library.transporters.prototype.wrapCallback_" id="apidoc.element.google-auth-library.transporters.prototype.wrapCallback_">
+        function <span class="apidocSignatureSpan">google-auth-library.transporters.prototype.</span>wrapCallback_
+        <span class="apidocSignatureSpan">(opt_callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">wrapCallback_ = function (opt_callback) {
+  return function(err, res, body) {
+    if (err || !body) {
+      return opt_callback &amp;&amp; opt_callback(err, body, res);
+    }
+    // Only and only application/json responses should
+    // be decoded back to JSON, but there are cases API back-ends
+    // responds without proper content-type.
+    try {
+      body = JSON.parse(body);
+    } catch (err) { /* no op */ }
+
+    if (body &amp;&amp; body.error &amp;&amp; res.statusCode !== 200) {
+      if (typeof body.error === 'string') {
+        err = new Error(body.error);
+        err.code = res.statusCode;
+
+      } else if (Array.isArray(body.error.errors)) {
+        err = new Error(body.error.errors.map(
+                         function(err) { return err.message; }
+                       ).join('\n'));
+        err.code = body.error.code;
+        err.errors = body.error.errors;
+
+      } else {
+        err = new Error(body.error.message);
+        err.code = body.error.code || res.statusCode;
+      }
+
+      body = null;
+
+    } else if (res.statusCode &gt;= 500) {
+      // Consider all '500 responses' errors.
+      err = new Error(body);
+      err.code = res.statusCode;
+      body = null;
+    }
+
+    if (opt_callback) {
+      opt_callback(err, body, res);
+    }
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+* Makes a request with given options and invokes callback.
+* @param {object} opts Options.
+* @param {Function=} opt_callback Optional callback.
+* @return {Request} Request object
+*/
+DefaultTransporter.prototype.request = function(opts, opt_callback) {
+ opts = this.configure(opts);
+ return request(opts.uri || opts.url, opts, this.<span class="apidocCodeKeywordSpan">wrapCallback_</span>(opt_callback));
+};
+
+/**
+* Wraps the response callback.
+* @param {Function=} opt_callback Optional callback.
+* @return {Function} Wrapped callback function.
+* @private
+...</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.google-auth-library.utils" id="apidoc.module.google-auth-library.utils">module google-auth-library.utils</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.google-auth-library.utils.extend" id="apidoc.element.google-auth-library.utils.extend">
+        function <span class="apidocSignatureSpan">google-auth-library.utils.</span>extend
+        <span class="apidocSignatureSpan">(obj)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">extend = function (obj) {
+  var source, prop;
+  for (var i = 1, length = arguments.length; i &lt; length; i++) {
+    source = arguments[i];
+    for (prop in source) {
+      if (source.hasOwnProperty(prop)) {
+        obj[prop] = source[prop];
+      }
+    }
+  }
+  return obj;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
+</body></html>
